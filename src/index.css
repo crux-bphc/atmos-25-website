@@ -100,21 +100,21 @@ button:focus-visible {
   }
 
   .hl-item {
-    @apply flex items-center justify-between px-4 py-2.5 border-b-2 border-black flex-nowrap;
+    @apply flex items-center justify-between px-4 py-2.5 border-b-2 border-black text-black flex-nowrap;
   }
   .hl-item:hover {
     @apply text-white;
   }
 
   .hl-title {
-    @apply text-3xl text-black font-[500] md:text-5xl font-noto;
+    @apply text-3xl font-[500] md:text-5xl font-noto;
   }
 
   .hl-subtitle {
-    @apply text-xl text-black font-medium font-noto;
+    @apply text-xl font-medium font-noto;
   }
 
   .hl-number {
-    @apply font-noto text-black text-3xl md:text-5xl;
+    @apply font-noto text-3xl md:text-5xl;
   }
 }
