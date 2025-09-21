@@ -1,7 +1,8 @@
-import { StrictMode } from "react";
+import { StrictMode, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import "./index.css";
+import Loader from "./components/Loader.tsx";
 import { routeTree } from "./routeTree.gen.ts";
 
 const router = createRouter({
@@ -16,13 +17,26 @@ declare module "@tanstack/react-router" {
 	}
 }
 
+function App() {
+	const [loading, setLoading] = useState(true);
+
+	useEffect(() => {
+		const timer = setTimeout(() => setLoading(false), 1500);
+		return () => clearTimeout(timer);
+	}, []);
+
+	if (loading) return <Loader/>;
+
+	return <RouterProvider router={router}/>
+}
+
 const rootElement = document.getElementById("root")!;
 
 if(!rootElement.innerHTML) {
   const root = createRoot(rootElement);
   root.render(
     <StrictMode>
-      <RouterProvider router={router}/>
+      <App/>
     </StrictMode>
   )
 }
