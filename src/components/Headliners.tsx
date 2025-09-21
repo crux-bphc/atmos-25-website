@@ -10,7 +10,7 @@ import img6 from "../assets/headliners/Innowave.jpeg";
 const events = [
   { title: "Robowars", subtitle: "Thriveforce", itemNumber: 1, image: img1 },
   {
-    title: "Drone Racing League",
+    title: "DRL",
     subtitle: "Aeolus",
     itemNumber: 2,
     image: img2,
@@ -19,7 +19,6 @@ const events = [
   { title: "ATV Expo", subtitle: "SAE", itemNumber: 4, image: img4 },
   { title: "CanSat", subtitle: "SEDS", itemNumber: 5, image: img5 },
   { title: "Innowave", subtitle: "E-Cell", itemNumber: 6, image: img6 },
-  { title: "", subtitle: "", itemNumber: "", image: "" },
 ];
 
 const Headliners = () => {
@@ -33,7 +32,7 @@ const Headliners = () => {
   return (
     <>
       <ul
-        className="hl-list bg-cover bg-center"
+        className="hl-list bg-cover bg-center flex flex-col bg-none"
         style={{
           backgroundImage: isBackground ? `url(${isBackground})` : "none",
         }}
@@ -43,12 +42,12 @@ const Headliners = () => {
             key={event.itemNumber}
             onMouseEnter={() => handleHover(event.image)}
             onMouseLeave={handleLeave}
-            className="hl-item"
+            className="hl-item h-20 border-y-2 bg-none"
           >
             <div className="flex flex-col">
-              <h2 className="hl-title">{event.title}</h2>
+              <h2 className="font-[helvetica] md:text-6xl text-5xl">{event.title}</h2>
             </div>
-            <h3 className="hl-number">{event.itemNumber}</h3>
+            <h3 className="hl-number font-[helvetica] font-bold md:text-6xl text-5xl">{event.itemNumber}</h3>
           </li>
         ))}
       </ul>

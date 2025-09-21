@@ -14,8 +14,8 @@ const words = [
 
 const Tape = () => {
   return (
-    <div className="overflow-x-clip overflow-y-hidden pb-32 pt-16 lg:py-24">
-      <div className="-mx-1 -rotate-2 bg-black">
+    <div className="overflow-x-clip overflow-y-hidden z-2">
+      <div className="-mx-1 bg-black">
         <div className="flex">
           <div className="flex flex-none animate-move-left gap-4 py-3 pr-4">
             {[...new Array(2)].fill(0).map((_, index) => (

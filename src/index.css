@@ -1,6 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap");
 @import "tailwindcss";
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap");
 
 @font-face {
   font-family: "Helvetica";
@@ -16,7 +16,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #F5FF46;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -29,11 +29,7 @@
 }
 a {
   font-weight: 500;
-  color: #646cff;
   text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 body {
@@ -94,13 +90,29 @@ button:focus-visible {
   animation: move-left 30s linear infinite;
 }
 
+@keyframes expand {
+  0% {
+    flex-grow: 1
+  }
+  50% {
+    flex-grow: 3 
+  }
+  100% {
+    flex-grow: 1
+  }
+}
+
+.animate-expand {
+  animation: expand 1s ease-in-out infinite;
+}
+
 @layer components {
   .hl-list {
-    @apply w-full list-none p-0 m-0 min-h-[300px] bg-[#ff4eff] border-t-2 transition-all duration-300;
+    @apply w-full list-none p-0 m-0 min-h-[300px];
   }
 
   .hl-item {
-    @apply flex items-center justify-between px-4 py-2.5 border-b-2 border-black text-black flex-nowrap;
+    @apply flex items-center justify-between px-4 py-2.5 border-black text-black flex-nowrap;
   }
   .hl-item:hover {
     @apply text-white;
