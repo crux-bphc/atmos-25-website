@@ -20,7 +20,7 @@ useEffect(() => {
       isDesktop: "(min-width: 769px)",
     },
     (context) => {
-				const { isMobile, isDesktop } = context.conditions;
+				const { isMobile, isDesktop } = context.conditions || {};
 
 				// Pin the section
 				ScrollTrigger.create({

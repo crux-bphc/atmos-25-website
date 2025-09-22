@@ -4,9 +4,9 @@ interface WarpTextProps {
 	className?: string;
 }
 
-export default function WarpText({className, ...props}: WarpTextProps) {
-	const textContainerRef = useRef(null);
-	const textRef = useRef(null);
+export default function WarpText({className}: WarpTextProps) {
+	const textContainerRef = useRef<HTMLDivElement>(null);
+	const textRef = useRef<HTMLParagraphElement>(null);
 	const [containerWidth, setContainerWidth] = useState<number>(1);
 	const [containerHeight, setContainerHeight] = useState<number>(1);
 	const [textWidth, setTextWidth] = useState<number>(1);
