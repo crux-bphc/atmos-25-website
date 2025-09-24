@@ -5,6 +5,7 @@ import Tape from "@/components/Tape";
 import Nav from "@/components/Nav";
 import Headliners from "@/components/Headliners";
 import EventsSection from "@/components/EventsSection";
+import ProshowsSection from "@/components/ProshowsSection";
 
 export const Route = createFileRoute("/")({
   component: RouteComponent,
@@ -28,22 +29,11 @@ function RouteComponent() {
       <div className="flex flex-col w-screen h-screen justify-start overflow-x-hidden p-0 m-0">
         <EventsSection/>
       </div>
-      <div className="spacer h-[300vh] w-screen"></div>
+      <div className="spacer h-[100vh] w-screen"></div>
       <div className="flex flex-col w-screen h-screen justify-start overflow-x-hidden p-0 m-0">
-        <EventsSection/>
+        <ProshowsSection/>
       </div>
-      <div className="spacer h-[300vh] w-screen"></div>
-      <div className="flex flex-col w-screen h-screen justify-start items-start overflow-hidden">
-        Slide4
-      </div>
-      
-      <div className="flex flex-col w-screen h-screen justify-start items-start overflow-hidden">
-        Slide4
-      </div>
-      
-      <div className="flex flex-col w-screen h-screen justify-start items-start overflow-hidden">
-        Slide4
-      </div>
+      <div className="spacer h-[100vh] w-screen"></div>
     </>
   );
 }

@@ -26,9 +26,15 @@ useEffect(() => {
 				ScrollTrigger.create({
 					trigger: sectionRef.current,
 					start: "top top",
-					end: "+=30000",
+					end: () => "+=" + window.innerHeight*2,
 					pin: true,
-					scrub: true,
+					scrub: .5,
+					snap: {
+						snapTo: .5, // Snap to the end of the animation (progress 1)
+						duration: 0.5, // How long the snap animation takes
+						ease: "power2.inOut", // Easing for the snap
+						delay: 0.1, // Wait a moment before snapping
+					},
 				});
 
 				if (isDesktop) {
@@ -40,7 +46,7 @@ useEffect(() => {
 						scrollTrigger: {
 							trigger: sectionRef.current,
 							start: "top top",
-							end: "+=1000",
+							end: () => "+=" + window.innerHeight/2,
 							scrub: true,
 						},
 					});
@@ -96,11 +102,11 @@ useEffect(() => {
 					</clipPath>
 				</defs>
 			</svg>
-			<div className="h-[70%] w-full mt-auto md:w-[70%] md:h-full md:ml-auto relative">
-				<EventLink href="/" label="WORKSHOPS" className="absolute top-16 left-8 md:top-32 md:left-16"/>
-				<EventLink href="/" label="PROSHOWS" className="absolute top-48 right-8 md:top-64 md:right-16"/>
-				<EventLink href="/" label="COMPETITIONS" className="absolute top-80 left-4 md:top-96 md:left-16"/>
-				<EventLink href="/" label="TALKS" className="absolute top-112 left-16 md:left-auto md:top-128 md:right-15"/>
+			<div className="h-[70%] w-full mt-auto md:w-[70%] md:h-full md:ml-auto relative text-[#F5FF46]">
+				<EventLink href="/" label="WORKSHOPS" className="absolute top-16 left-8 md:top-1/6 md:left-16"/>
+				<EventLink href="/" label="PROSHOWS" className="absolute top-48 right-8 md:top-2/6 md:right-16"/>
+				<EventLink href="/" label="TALKS" className="absolute top-80 left-4 md:top-3/6 md:left-16"/>
+				<EventLink href="/" label="COMPETITIONS" className="absolute top-112 left-16 md:left-auto md:top-4/6 md:right-15"/>
 			</div>
 		</div>
 	)

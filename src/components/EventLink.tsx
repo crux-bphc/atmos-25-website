@@ -9,7 +9,7 @@ export default function EventLink({label, href, className} : EventLinkProps) {
   return (
     <a 
       href={href} 
-      className={`inline-block px-4 py-2 font-bold font-[helvetica] text-[#F5FF46] bg-black text-5xl md:text-6xl overflow-hidden group ${className}`}
+      className={`inline-block px-6 py-4 font-bold font-[helvetica] bg-black text-6xl md:text-7xl overflow-hidden group ${className}`}
 			>
 			{label}
     </a>
