@@ -15,25 +15,27 @@ function RouteComponent() {
   return (
     <>
       <Nav />
-      <img
-        src={bg_image}
-        className="w-screen h-screen p-0 m-0 absolute left-0 top-0 -z-1 object-cover object-top"
-      />
-      <div className="flex flex-col w-screen h-[calc(100vh-10rem)] justify-center items-center overflow-x-hidden">
-        <img className="w-[22rem] md:w-[28rem] m-auto" src={logo} alt="atmos solaris surge" />
-        <Tape />
+      <div id="smooth-wrapper">
+        <div id="smooth-content">
+          <div className="flex flex-col w-screen h-[calc(100vh-10rem)] justify-center items-center overflow-x-hidden relative">
+            <img
+              src={bg_image}
+              className="h-full md:w-full p-0 m-0 absolute left-0 top-0 -z-1 object-cover object-top"
+            />
+            <img className="w-[22rem] md:w-[28rem] m-auto" src={logo} alt="atmos solaris surge" />
+            <Tape />
+          </div>
+          <div className="flex flex-col w-screen justify-start items-center overflow-x-hidden bg-[#F5FF46]">
+            <Headliners />
+          </div>
+          <div className="flex flex-col w-screen h-[200svh] justify-start overflow-x-hidden p-0 m-0">
+            <EventsSection/>
+          </div>
+          <div className="flex flex-col w-screen h-[200svh] justify-start overflow-x-hidden p-0 m-0">
+            <ProshowsSection/>
+          </div>
+        </div>
       </div>
-      <div className="flex flex-col w-screen justify-start items-center overflow-x-hidden bg-[#F5FF46]">
-        <Headliners />
-      </div>
-      <div className="flex flex-col w-screen h-screen justify-start overflow-x-hidden p-0 m-0">
-        <EventsSection/>
-      </div>
-      <div className="spacer h-[100vh] w-screen"></div>
-      <div className="flex flex-col w-screen h-screen justify-start overflow-x-hidden p-0 m-0">
-        <ProshowsSection/>
-      </div>
-      <div className="spacer h-[100vh] w-screen"></div>
     </>
   );
 }

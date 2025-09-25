@@ -1,8 +1,16 @@
 import { useEffect, useRef } from "react"
 import {gsap} from "gsap"
 import {ScrollTrigger} from "gsap/ScrollTrigger"
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+ScrollSmoother.create({
+  smooth: 1,
+  effects: true,
+});
+
+ScrollTrigger.normalizeScroll(true);
+ScrollTrigger.config({ ignoreMobileResize: true });
 
 export default function ProshowsSection(){
 	const sectionRef = useRef(null);
@@ -59,7 +67,7 @@ useEffect(() => {
 						scrollTrigger: {
 							trigger: sectionRef.current,
 							start: "top top",
-							end: "+=1000",
+							end: () => "+=" + window.innerHeight/2,
 							scrub: true,
 						},
 					});

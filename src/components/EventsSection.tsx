@@ -31,7 +31,7 @@ useEffect(() => {
 					scrub: .5,
 					snap: {
 						snapTo: .5, // Snap to the end of the animation (progress 1)
-						duration: 0.5, // How long the snap animation takes
+						duration: {min: 0.5, max: 1}, // How long the snap animation takes
 						ease: "power2.inOut", // Easing for the snap
 						delay: 0.1, // Wait a moment before snapping
 					},
@@ -60,7 +60,7 @@ useEffect(() => {
 						scrollTrigger: {
 							trigger: sectionRef.current,
 							start: "top top",
-							end: "+=1000",
+							end: () => "+=" + window.innerHeight/2,
 							scrub: true,
 						},
 					});
@@ -72,7 +72,7 @@ useEffect(() => {
 	}, []);
 
 	return (
-		<div ref={sectionRef} className="h-screen w-screen relative flex flex-row [background-image:linear-gradient(to_right,rgba(0,0,0,1)_5px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,1)_5px,transparent_1px)] [background-size:5rem_5rem]">
+		<div ref={sectionRef} className="h-screen w-screen relative flex flex-row bg-[#F5FF46] [background-image:linear-gradient(to_right,rgba(0,0,0,1)_5px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,1)_5px,transparent_1px)] [background-size:5rem_5rem]">
 			<svg ref={textRef} className="w-full h-full absolute top-0 left-0 z-5"
 			xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="none" fill="none">
 				<g clipPath="url(#clip0_248_624)">
@@ -102,11 +102,11 @@ useEffect(() => {
 					</clipPath>
 				</defs>
 			</svg>
-			<div className="h-[70%] w-full mt-auto md:w-[70%] md:h-full md:ml-auto relative text-[#F5FF46]">
-				<EventLink href="/" label="WORKSHOPS" className="absolute top-16 left-8 md:top-1/6 md:left-16"/>
-				<EventLink href="/" label="PROSHOWS" className="absolute top-48 right-8 md:top-2/6 md:right-16"/>
-				<EventLink href="/" label="TALKS" className="absolute top-80 left-4 md:top-3/6 md:left-16"/>
-				<EventLink href="/" label="COMPETITIONS" className="absolute top-112 left-16 md:left-auto md:top-4/6 md:right-15"/>
+			<div className="h-[70%] w-full mt-auto md:w-[70%] md:h-full md:ml-auto relative text-[#F5FF46] pb-24 px-12 md:p-24 flex flex-col justify-around items-center">
+				<EventLink href="/" label="WORKSHOPS" className="self-start"/>
+				<EventLink href="/" label="PROSHOWS" className="self-end"/>
+				<EventLink href="/" label="TALKS" className="self-start"/>
+				<EventLink href="/" label="COMPETITIONS" className="self-end"/>
 			</div>
 		</div>
 	)
