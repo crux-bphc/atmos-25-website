@@ -65,7 +65,7 @@ export default function EventsSection(){
 				</svg>
 				
 			</motion.div>
-			<div className="h-[70%] w-full mt-auto md:w-[70%] md:h-full md:ml-auto relative pb-24 px-12 md:py-8 md:px-32 flex flex-col justify-center items-center">
+			<div id="events" className="h-[70%] w-full mt-auto md:w-[70%] md:h-full md:ml-auto relative pb-24 px-12 md:py-8 md:px-32 flex flex-col justify-center items-center">
 				<EventLink href="/" label="Workshops" className="self-start my-1 ml-8"/>
 				<EventLink href="/" label="Proshows" className="self-end my-1 mt-6 mr-12"/>
 				<EventLink href="/" label="Talks" className="self-start my-1"/>
