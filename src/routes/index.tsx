@@ -26,7 +26,7 @@ function RouteComponent() {
         <div id="events" className="snap-start h-screen flex flex-col w-screen justify-start overflow-x-hidden p-0 m-0">
           <EventsSection/>
         </div>
-        <div id="proshows" className="snap-start h-screen flex flex-col w-screen justify-start overflow-x-hidden p-0 m-0">
+        <div className="snap-start h-screen flex flex-col w-screen justify-start overflow-x-hidden p-0 m-0">
           <ProshowsSection/>
         </div>
         <Gallery/>

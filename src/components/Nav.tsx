@@ -6,7 +6,6 @@ const menuItems = [
   { label: "Home", href: "#top" },
   { label: "Headliners", href: "#headliners" },
   { label: "Events", href: "#events" },
-  { label: "Proshows", href: "#proshows" },
 ];
 
 export default function Nav() {
