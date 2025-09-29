@@ -11,7 +11,7 @@ export default function Footer() {
           <img
             src={logo_white}
             alt="atmos logo"
-            className="h-14 md:h-24 object-contain mb-4 md:mb-0"
+            className="h-14 md:h-20 object-contain mb-4 md:mb-0"
           />
         </div>
 
