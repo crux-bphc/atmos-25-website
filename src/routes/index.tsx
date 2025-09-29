@@ -1,10 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Nav from "@/components/Nav";
 import HomeSection from "@/components/HomeSection";
+import AboutSection from "@/components/AboutSection";
 import Headliners from "@/components/Headliners";
 import EventsSection from "@/components/EventsSection";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
+
 
 
 export const Route = createFileRoute("/")({
@@ -16,9 +18,8 @@ function RouteComponent() {
     <>
       <Nav />
       <div className="snap-y snap-mandatory h-screen overflow-y-scroll">
-        <div id="top" className="snap-start flex flex-col w-screen justify-center items-center overflow-x-hidden relative h-[calc(200vh-10rem)]">
-          <HomeSection />
-        </div>
+        <HomeSection />
+        <AboutSection/>
         <div id="headliners" className="snap-center flex flex-col w-screen justify-start items-center overflow-x-hidden bg-[#F5FF46]">
           <Headliners />
         </div>
