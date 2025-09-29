@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-center md:items-start text-gray-300">
-          <span>Made by CRUx</span>
+          <span>Made by CRUx & DoTA</span>
         </div>
 
         <div className="text-gray-300">
