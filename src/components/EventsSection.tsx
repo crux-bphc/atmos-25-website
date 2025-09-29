@@ -16,13 +16,13 @@ export default function EventsSection(){
 	}	
 
 	return (
-		<section ref={sectionRef} className="h-screen w-screen relative flex flex-row bg-radial/oklab from-[#FB71BC] to-[#FE45A9] overflow-hidden snap-start">
+		<section ref={sectionRef} className="h-svh w-screen relative flex flex-row bg-radial/oklab from-[#FB71BC] to-[#FE45A9] overflow-hidden snap-start">
 			<motion.div
 			initial = {{width: "100%"}}
 			whileInView={inViewAnimation}
 			transition={{ duration: 1.8, ease: "easeInOut", times : [0, 1/1.8, 1] }}
 			viewport={{ amount: 0.9, once: true}}
-			className="svg-container absolute top-0 left-0 w-screen h-screen z-5 bg-black flex flex-col">
+			className="svg-container absolute top-0 left-0 w-screen h-svh z-5 bg-black flex flex-col">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 180" fill="none" preserveAspectRatio="none" className="w-full h-16 hidden md:block">
 				<path d="M137.463 35.1897H38.2759V71.4212H129.324V101.055H38.2759V144.926H142.04V175.601H0V4.97749H137.463V35.1897Z" fill="white"/>
 				<path d="M271.883 4.97749H312.575L248.613 175.601H211.608L148.282 4.97749H190.118L230.81 134.508L271.883 4.97749Z" fill="white"/>
@@ -65,12 +65,12 @@ export default function EventsSection(){
 				</svg>
 				
 			</motion.div>
-			<div className="h-[70%] w-full mt-auto md:w-[70%] md:h-full md:ml-auto relative pb-24 px-12 md:py-8 md:px-32 flex flex-col justify-center items-center">
-				<EventLink href="/" label="Workshops" className="self-start my-1 ml-8"/>
-				<EventLink href="/" label="Proshows" className="self-end my-1 mt-6 mr-12"/>
-				<EventLink href="/" label="Talks" className="self-start my-1"/>
+			<div className="h-[70%] w-full mt-auto md:w-[70%] md:h-full md:ml-auto relative md:pb-24 px-4 md:px-12 md:py-8 md:px-32 flex flex-col justify-center items-center gap-3 md:gap-none">
+				<EventLink href="/" label="Workshops" className="self-start my-1 md:ml-8"/>
+				<EventLink href="/" label="Proshows" className="self-end my-1 md:mt-6 md:mr-12"/>
+				<EventLink href="/" label="Talks" className="self-start my-1 ml-6"/>
 				<EventLink href="/" label="Competition" className="self-end my-1"/>
-				<EventLink href="/" label="Games" className="self-start my-1 ml-16 mt-2"/>
+				<EventLink href="/" label="Games" className="self-start my-1 md:ml-16 md:mt-2"/>
 				<Glass className="inset-0 w-24 h-36 left-1/100 top-2/16"/>
 				{
 					Array.from({length: 20}, () => <Glass className="inset-0 w-24 h-36 left-1/100 top-2/16" style={{left: `${Math.random()*100}%`, top: `${Math.random()*100}%`}}/>)
