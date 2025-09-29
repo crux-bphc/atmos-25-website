@@ -1,0 +1,46 @@
+import logo from "@/assets/logo.png";
+import bg_image from "@/assets/home_bg.png";
+import Tape from "@/components/Tape";
+
+export default function HomeSection() {
+    return (
+        <>
+            <img
+                src={bg_image}
+                className="absolute inset-0 w-full h-full object-cover z-[-1]"
+                style={{objectPosition: '50% 0%'}}
+                alt="background image"
+            />
+            
+            <div className="flex flex-col justify-center items-center h-[calc(100vh-10rem)] relative z-10">
+                <img className="w-[22rem] md:w-[28rem] m-auto" src={logo} alt="atmos solaris surge" />
+                <Tape />
+            </div>
+            
+            <div className="flex flex-col justify-center items-center min-h-screen p-8 relative z-10">
+                <div className="absolute inset-0 flex justify-center items-center pointer-events-none z-0 overflow-hidden">
+                    <span className="text-[25vw] font-extrabold text-black/5 select-none whitespace-nowrap leading-none" style={{letterSpacing: '2vw'}}>LARGEST</span>
+                </div>
+                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                    <div className="space-y-6">
+                        <div className="space-y-2">
+                            <div className="text-2xl md:text-3xl font-normal text-black">
+                                <span className="text-4xl md:text-6xl font-bold">10,000</span> students footfall
+                            </div> 
+                        </div>
+                        <div className="space-y-2">
+                            <div className="text-2xl md:text-3xl font-bold text-black">Best Proshows</div>
+                            <div className="w-20 h-1 bg-black"></div>
+                        </div>
+                        <div className="text-lg md:text-xl text-black">Top Workshops</div>
+                    </div>
+                    <div className="space-y-4">
+                        <h1 className="text-4xl md:text-6xl font-bold text-black leading-tight">
+                        Introducing the largest Technical Fest of South India
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
