@@ -24,8 +24,8 @@ export default function Loader() {
       fill: [null, "#fff", "#000", "#fff"],
 			transition: {
         default: {duration: 0.8, ease: easeInOut},
-        fill: { duration: 0.3, ease: easeInOut, delay: 1},
-        times: [0, 0.33, 0.33, 1]
+        fill: { duration: 0.5, ease: easeInOut, delay: 1.2},
+        times: [0, 0.33, 0.66, 1]
 			},
 		},
 	};
@@ -39,7 +39,7 @@ export default function Loader() {
 				variants={containerVariants}
 				initial="hidden"
 				animate="visible" 
-        className="w-[22rem] md:w-[28rem] m-auto"
+        className="w-[24rem] md:w-[32rem] m-auto"
 			>
         <g xmlns="http://www.w3.org/2000/svg" clip-path="url(#clip0_5_142)" id="g42">
           <motion.path 
