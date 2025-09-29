@@ -3,80 +3,10 @@ import {gsap} from "gsap"
 import {ScrollTrigger} from "gsap/ScrollTrigger"
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-ScrollSmoother.create({
-  smooth: 1,
-  effects: true,
-});
-
-ScrollTrigger.normalizeScroll(true);
-ScrollTrigger.config({ ignoreMobileResize: true });
 
 export default function ProshowsSection(){
 	const sectionRef = useRef(null);
 	const textRef = useRef(null);
-
-useEffect(() => {
-	const mm = gsap.matchMedia();
-
-	mm.add(
-		{
-			// Mobile: width <= 768px
-			isMobile: "(max-width: 768px)",
-			// Desktop: width > 768px
-			isDesktop: "(min-width: 769px)",
-		},
-		(context) => {
-				const { isMobile, isDesktop } = context.conditions || {};
-
-				// Pin the section
-				ScrollTrigger.create({
-					trigger: sectionRef.current,
-					start: "top top",
-					end: () => "+=" + window.innerHeight*2,
-					pin: true,
-					scrub: .5,
-					snap: {
-						snapTo: .5, // Snap to the end of the animation (progress 1)
-						duration: 0.5, // How long the snap animation takes
-						ease: "power2.inOut", // Easing for the snap
-						delay: 0.1, // Wait a moment before snapping
-					},
-				});
-
-				if (isDesktop) {
-					// Shrink SVG from right
-					gsap.to(textRef.current, {
-						width: "30%",
-						transformOrigin: "left center", // shrink from right edge
-						ease: "none",
-						scrollTrigger: {
-							trigger: sectionRef.current,
-							start: "top top",
-							end: () => "+=" + window.innerHeight/2,
-							scrub: true,
-						},
-					});
-				}
-
-				if (isMobile) {
-					gsap.to(textRef.current, {
-						height: "30%",
-						transformOrigin: "top center", // shrink from left edge
-						ease: "none",
-						scrollTrigger: {
-							trigger: sectionRef.current,
-							start: "top top",
-							end: () => "+=" + window.innerHeight/2,
-							scrub: true,
-						},
-					});
-				}
-			}
-		);
-
-		return () => mm.revert();
-	}, []);
 
 	return (
 		<div ref={sectionRef} className="h-screen w-screen relative flex flex-row bg-[#0064FA] [background-image:linear-gradient(to_right,rgba(0,0,0,1)_5px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,1)_5px,transparent_1px)] [background-size:5rem_5rem]">
