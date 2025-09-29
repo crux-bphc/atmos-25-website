@@ -9,7 +9,7 @@ export default function EventLink({label, href, className} : EventLinkProps) {
   return (
     <a 
       href={href} 
-      className={`relative flex flex-row items-center gap-6 p-4 pl-6 rounded-full border border-5 border-black overflow-hidden before:transiton-translate before:duration-200 before:ease-in before:-z-1 before:absolute before:inset-0 before:bg-black before:block before:-translate-x-full hover:before:translate-x-0 group ${className}`}
+      className={`relative flex flex-row items-center z-2 gap-6 p-4 pl-6 rounded-full border border-5 border-black overflow-hidden before:transiton-translate before:duration-200 before:ease-in before:-z-1 before:absolute before:inset-0 before:bg-black before:block before:-translate-x-full hover:before:translate-x-0 group ${className}`}
 			>
 			<span className=" font-[400]! font-[Rubik] text-4xl md:text-6xl text-black group-hover:text-white transition-color duration-200 ease-in-out">{label}</span>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93 91" fill="none" className="w-18 group-hover:invert transition-all duration-200">

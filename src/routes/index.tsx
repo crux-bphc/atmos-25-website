@@ -5,7 +5,6 @@ import Tape from "@/components/Tape";
 import Nav from "@/components/Nav";
 import Headliners from "@/components/Headliners";
 import EventsSection from "@/components/EventsSection";
-import ProshowsSection from "@/components/ProshowsSection";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
 
@@ -29,12 +28,7 @@ function RouteComponent() {
       <div className="snap-center flex flex-col w-screen justify-start items-center overflow-x-hidden bg-[#F5FF46]">
         <Headliners />
       </div>
-      <div className="snap-start h-screen flex flex-col w-screen justify-start overflow-x-hidden p-0 m-0">
-        <EventsSection/>
-      </div>
-      <div className="snap-start h-screen flex flex-col w-screen justify-start overflow-x-hidden p-0 m-0">
-        <ProshowsSection/>
-      </div>
+      <EventsSection/>
       <Gallery/>
       <Footer/>
     </div>
