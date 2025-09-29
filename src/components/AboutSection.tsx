@@ -33,6 +33,6 @@ export default function AboutSection() {
 							</h1>
 					</div>
 			</div>
-		</div>
+		</section>
 	)
 }
