@@ -20,9 +20,9 @@ export default function HomeSection() {
                 <div></div>
             </div>
             
-            <div className="flex flex-col justify-center items-center min-h-screen p-8 relative z-10">
-                <div className="absolute inset-0 flex justify-center items-center pointer-events-none z-0 overflow-hidden">
-                    <span className="text-[25vw] font-extrabold text-black/5 select-none whitespace-nowrap leading-none" style={{letterSpacing: '2vw'}}>LARGEST</span>
+            <div className="flex flex-col justify-center items-center min-h-screen p-8 relative z-10 w-full">
+                <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0 overflow-hidden">
+                    <span className="text-[23vw] font-extrabold text-black/5 select-none whitespace-nowrap leading-none" style={{letterSpacing: '1vw'}}>LARGEST</span>
                 </div>
                 <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">
