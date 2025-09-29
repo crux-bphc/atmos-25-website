@@ -1,4 +1,4 @@
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.svg";
 import bg_image from "@/assets/home_bg.png";
 import Tape from "@/components/Tape";
 
@@ -12,9 +12,12 @@ export default function HomeSection() {
                 alt="background image"
             />
             
-            <div className="flex flex-col justify-center items-center h-[calc(100vh-10rem)] relative z-10">
-                <img className="w-[22rem] md:w-[28rem] m-auto" src={logo} alt="atmos solaris surge" />
+            <div className="grid grid-rows-[50fr_auto_4rem_auto_1fr] h-screen relative z-20 place-items-center">
+                <div></div>
+                <img className="w-[24rem] md:w-[32rem]" src={logo} alt="atmos solaris surge" />
+                <div></div>
                 <Tape />
+                <div></div>
             </div>
             
             <div className="flex flex-col justify-center items-center min-h-screen p-8 relative z-10">

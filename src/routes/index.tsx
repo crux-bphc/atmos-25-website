@@ -3,7 +3,6 @@ import Nav from "@/components/Nav";
 import HomeSection from "@/components/HomeSection";
 import Headliners from "@/components/Headliners";
 import EventsSection from "@/components/EventsSection";
-import ProshowsSection from "@/components/ProshowsSection";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
 
