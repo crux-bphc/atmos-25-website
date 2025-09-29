@@ -30,7 +30,7 @@ export default function Loader() {
 		},
 	};
 	return (
-		<div className="absolute inset-0 flex items-center justify-center bg-black z-100">
+		<motion.div key="loader" exit={{opacity: 0}} className="absolute inset-0 flex items-center justify-center bg-black z-100">
 			<motion.svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="817"
@@ -150,6 +150,6 @@ export default function Loader() {
         </g>
 				{/* Note: fill is set to "none" and stroke is added to make the pathLength animation visible */}
 			</motion.svg>
-		</div>
+		</motion.div>
 	);
 }

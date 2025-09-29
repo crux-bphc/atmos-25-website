@@ -4,6 +4,7 @@ import { RouterProvider, createRouter } from "@tanstack/react-router";
 import "./index.css";
 import Loader from "./components/Loader.tsx";
 import { routeTree } from "./routeTree.gen.ts";
+import { AnimatePresence } from "motion/react";
 
 const router = createRouter({
 	routeTree,
@@ -25,9 +26,15 @@ function App() {
 		return () => clearTimeout(timer);
 	}, []);
 
-	if (loading) return <Loader/>;
-
-	return <RouterProvider router={router}/>
+	
+	return (
+		<>
+		<AnimatePresence>
+			{loading ? <Loader/> : null}
+		</AnimatePresence>
+		<RouterProvider router={router}/>
+	</>
+)
 }
 
 const rootElement = document.getElementById("root")!;
