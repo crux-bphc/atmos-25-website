@@ -17,16 +17,16 @@ function RouteComponent() {
     <>
       <Nav />
       <div className="snap-y snap-mandatory h-screen overflow-y-scroll">
-        <div className="snap-start flex flex-col w-screen justify-center items-center overflow-x-hidden relative h-[calc(200vh-10rem)]">
+        <div id="top" className="snap-start flex flex-col w-screen justify-center items-center overflow-x-hidden relative h-[calc(200vh-10rem)]">
           <HomeSection />
         </div>
-        <div className="snap-center flex flex-col w-screen justify-start items-center overflow-x-hidden bg-[#F5FF46]">
+        <div id="headliners" className="snap-center flex flex-col w-screen justify-start items-center overflow-x-hidden bg-[#F5FF46]">
           <Headliners />
         </div>
-        <div className="snap-start h-screen flex flex-col w-screen justify-start overflow-x-hidden p-0 m-0">
+        <div id="events" className="snap-start h-screen flex flex-col w-screen justify-start overflow-x-hidden p-0 m-0">
           <EventsSection/>
         </div>
-        <div className="snap-start h-screen flex flex-col w-screen justify-start overflow-x-hidden p-0 m-0">
+        <div id="proshows" className="snap-start h-screen flex flex-col w-screen justify-start overflow-x-hidden p-0 m-0">
           <ProshowsSection/>
         </div>
         <Gallery/>
