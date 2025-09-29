@@ -1,5 +1,4 @@
-import { useEffect, useRef } from "react"
-import {motion} from "motion/react"
+import { useRef } from "react"
 import EventLink from "./EventLink";
 import Glass from "./Glass";
 

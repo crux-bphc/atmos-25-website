@@ -1,8 +1,4 @@
-import { useEffect, useRef } from "react"
-import {gsap} from "gsap"
-import {ScrollTrigger} from "gsap/ScrollTrigger"
-import { ScrollSmoother } from "gsap/ScrollSmoother";
-
+import { useRef } from "react"
 
 export default function ProshowsSection(){
 	const sectionRef = useRef(null);
