@@ -6,6 +6,9 @@ import Nav from "@/components/Nav";
 import Headliners from "@/components/Headliners";
 import EventsSection from "@/components/EventsSection";
 import ProshowsSection from "@/components/ProshowsSection";
+import Footer from "@/components/Footer";
+import Gallery from "@/components/Gallery";
+
 
 export const Route = createFileRoute("/")({
   component: RouteComponent,
@@ -34,8 +37,12 @@ function RouteComponent() {
           <div className="flex flex-col w-screen h-[200svh] justify-start overflow-x-hidden p-0 m-0">
             <ProshowsSection/>
           </div>
+          <Gallery />
+          <Footer />
         </div>
+
       </div>
+
     </>
   );
 }
