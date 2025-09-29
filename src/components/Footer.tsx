@@ -3,7 +3,7 @@ import logo_white from "@/assets/logo_white.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white px-8 md:px-20 py-10 relative overflow-hidden">
+    <footer className="bg-black text-white px-8 md:px-20 py-10 relative overflow-hidden snap-end">
       <div className="border-t border-gray-600 mb-10"></div>
 
       <div className="grid md:grid-cols-3 gap-10">

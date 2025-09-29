@@ -14,7 +14,7 @@
     "@tanstack/react-router": "^1.131.30",
     "gsap": "^3.13.0",
     "lucide-react": "^0.542.0",
-    "motion": "^12.23.12",
+    "motion": "^12.23.22",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "tailwindcss": "^4.1.12"

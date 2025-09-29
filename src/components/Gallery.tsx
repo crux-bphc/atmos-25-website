@@ -33,7 +33,7 @@ export default function Gallery() {
   }, []);
 
   return (
-    <section className="w-full py-12 [transform:none]">
+    <section className="w-full py-12 [transform:none] snap-start">
       {isMobile ? (
         <div className="grid grid-cols-2 gap-4 px-4">
           {images.map((src, i) => (

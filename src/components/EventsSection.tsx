@@ -1,80 +1,14 @@
-import { useEffect, useRef } from "react"
-import {gsap} from "gsap"
-import {ScrollTrigger} from "gsap/ScrollTrigger"
+import { useRef } from "react"
 import EventLink from "./EventLink";
 import Glass from "./Glass";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function EventsSection(){
 	const sectionRef = useRef(null);
 	const textRef = useRef(null);
 
-useEffect(() => {
-  const mm = gsap.matchMedia();
-
-  mm.add(
-    {
-      // Mobile: width <= 768px
-      isMobile: "(max-width: 768px)",
-      // Desktop: width > 768px
-      isDesktop: "(min-width: 769px)",
-    },
-    (context) => {
-				const { isMobile, isDesktop } = context.conditions || {};
-
-				// Pin the section
-				ScrollTrigger.create({
-					trigger: sectionRef.current,
-					start: "top top",
-					end: () => "+=" + window.innerHeight*2,
-					pin: true,
-					scrub: .5,
-					snap: {
-						snapTo: .5, // Snap to the end of the animation (progress 1)
-						duration: {min: 0.5, max: 1}, // How long the snap animation takes
-						ease: "power2.inOut", // Easing for the snap
-						delay: 0.1, // Wait a moment before snapping
-					},
-				});
-
-				if (isDesktop) {
-					// Shrink SVG from right
-					gsap.to(textRef.current, {
-						width: "30%",
-						transformOrigin: "left center", // shrink from right edge
-						ease: "none",
-						scrollTrigger: {
-							trigger: sectionRef.current,
-							start: "top top",
-							end: () => "+=" + window.innerHeight/2,
-							scrub: true,
-						},
-					});
-				}
-
-				if (isMobile) {
-					gsap.to(textRef.current, {
-						height: "30%",
-						transformOrigin: "top center", // shrink from left edge
-						ease: "none",
-						scrollTrigger: {
-							trigger: sectionRef.current,
-							start: "top top",
-							end: () => "+=" + window.innerHeight/2,
-							scrub: true,
-						},
-					});
-				}
-			}
-		);
-
-  	return () => mm.revert();
-	}, []);
-
 	return (
 		<div ref={sectionRef} className="h-screen w-screen relative flex flex-row bg-radial/oklab from-[#FB71BC] to-[#FE45A9]">
-			<svg ref={textRef} className="w-full h-full absolute top-0 left-0 z-5"
+			<svg ref={textRef} className="w-full h-full absolute top-0 left-0 z-5 invisible"
 			xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="none" fill="none">
 				<g clipPath="url(#clip0_248_624)">
 					<rect width="1920" height="1080" fill="black"/>
@@ -84,7 +18,7 @@ useEffect(() => {
 					<path d="M976.16 4.97749H1058.31L1207.6 124.09V4.97749H1280.59V175.601H1202.25L1049.15 54.4051V175.601H976.16V4.97749Z" fill="#FFF"/>
 					<path d="M1605.38 4.97749V35.1897H1493.22V175.601H1414.38V35.1897H1301.72V4.97749H1605.38Z" fill="#FFF"/>
 					<path d="M1687.29 122.932C1689.67 130.727 1694.33 136.553 1701.28 140.412C1714 147.434 1735.78 150.945 1766.64 150.945C1785.12 150.945 1800.13 150.019 1811.66 148.167C1833.53 144.617 1844.47 138.019 1844.47 128.373C1844.47 122.74 1839.04 118.379 1828.19 115.293C1817.34 112.283 1800.3 109.621 1777.07 107.305L1737.39 103.254C1698.4 99.2412 1671.44 94.881 1656.52 90.1736C1631.26 82.3022 1618.62 69.9936 1618.62 53.2476C1618.62 37.9678 1630.83 25.2733 1655.25 15.164C1679.66 5.05466 1715.52 0 1762.83 0C1802.33 0 1835.99 4.78457 1863.79 14.3537C1891.77 23.8457 1906.44 37.6592 1907.79 55.7942H1832.51C1831.16 45.5305 1821.32 38.2379 1803.01 33.9164C1790.8 31.0611 1775.63 29.6334 1757.49 29.6334C1737.31 29.6334 1721.2 31.4855 1709.16 35.1897C1697.13 38.8939 1691.11 44.0643 1691.11 50.701C1691.11 56.7974 1697.04 61.3505 1708.91 64.3601C1716.54 66.3666 1732.82 68.7203 1757.74 71.4212L1822.34 78.4823C1850.65 81.5691 1872.02 85.6978 1886.43 90.8682C1908.81 98.8939 1920 110.508 1920 125.711C1920 141.299 1906.86 154.264 1880.58 164.605C1854.47 174.868 1817.51 180 1769.69 180C1720.86 180 1682.46 174.945 1654.48 164.836C1626.51 154.65 1612.52 140.682 1612.52 122.932H1687.29Z" fill="#FFF"/>
-					<path d="M274.925 255.379H76.5518V327.842H258.648V387.109H76.5518V474.852H284.081V536.203H0V194.955H274.925V255.379Z" fill="#FFF"/>
+					<path d="M274.925 255.379H76.5518V327.842H258.648V387.109H76.5518V474.852H284.081V53`6.203H0V194.955H274.925V255.379Z" fill="#FFF"/>
 					<path d="M543.767 194.955H625.151L497.225 536.203H423.217L296.563 194.955H380.236L461.62 454.016L543.767 194.955Z" fill="#FFF"/>
 					<path d="M928.072 255.379H729.699V327.842H911.795V387.109H729.699V474.852H937.228V536.203H653.147V194.955H928.072V255.379Z" fill="#FFF"/>
 					<path d="M976.16 194.955H1058.31L1207.6 433.18V194.955H1280.59V536.203H1202.25L1049.15 293.81V536.203H976.16V194.955Z" fill="#FFF"/>
