@@ -42,7 +42,7 @@ const Headliners = () => {
             key={event.itemNumber}
             onMouseEnter={() => handleHover(event.image)}
             onMouseLeave={handleLeave}
-            className="hl-item h-20 border-y-2 bg-none"
+            className="hl-item h-20 border-y-1 bg-none"
           >
             <div className="flex flex-col">
               <h2 className="font-[helvetica] md:text-6xl text-5xl">{event.title}</h2>

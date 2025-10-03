@@ -17,7 +17,7 @@ const Tape = () => {
     <div className="overflow-x-clip overflow-y-hidden z-2">
       <div className="-mx-1 bg-black">
         <div className="flex">
-          <div className="flex flex-none animate-move-left gap-4 py-1 pr-4">
+          <div className="flex flex-none animate-move-left gap-4 py-1 md:py-4 pr-4">
             {[...new Array(2)].fill(0).map((_, index) => (
               <React.Fragment key={index}>
                 {words.map((word, wordIndex) => (
