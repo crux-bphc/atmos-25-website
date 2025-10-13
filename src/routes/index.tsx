@@ -6,6 +6,7 @@ import Headliners from "@/components/Headliners";
 import EventsSection from "@/components/EventsSection";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
+import Tape from "@/components/Tape";
 
 
 
@@ -20,7 +21,8 @@ function RouteComponent() {
       <div className="snap-y snap-mandatory h-screen overflow-y-scroll">
         <HomeSection />
         <AboutSection/>
-        <div id="headliners" className="snap-center flex flex-col w-screen justify-start items-center overflow-x-hidden bg-[#F5FF46]">
+        <Tape />
+        <div id="headliners" className="snap-center flex flex-col w-screen justify-start items-center overflow-x-hidden bg-[#66f2ff]">
           <Headliners />
         </div>
         <EventsSection/>
