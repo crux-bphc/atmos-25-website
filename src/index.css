@@ -131,3 +131,33 @@ button:focus-visible {
     @apply font-noto text-3xl md:text-5xl;
   }
 }
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes scrollReverse {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.animate-scroll-slow {
+  animation: scroll var(--duration) linear infinite;
+}
+.animate-scroll-medium {
+  animation: scroll var(--duration) linear infinite;
+}
+.animate-scroll-fast {
+  animation: scroll var(--duration) linear infinite;
+}
+
+.animate-scroll-reverse-slow {
+  animation: scrollReverse var(--duration) linear infinite;
+}
+.animate-scroll-reverse-medium {
+  animation: scrollReverse var(--duration) linear infinite;
+}
+.animate-scroll-reverse-fast {
+  animation: scrollReverse var(--duration) linear infinite;
+}

@@ -3,7 +3,7 @@ import logo_white from "@/assets/logo_white.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white px-8 md:px-20 py-10 relative overflow-hidden snap-end">
+    <footer className="bg-black text-white px-8 md:px-20 py-10 w-screen max-w-screen box-border overflow-visible snap-end">
       <div className="border-t border-gray-600 mb-10"></div>
 
       <div className="grid md:grid-cols-3 gap-10">
@@ -11,7 +11,7 @@ export default function Footer() {
           <img
             src={logo_white}
             alt="atmos logo"
-            className="h-14 md:h-20 object-contain mb-4 md:mb-0"
+            className="h-14 md:h-20 object-contain mb-4 md:mb-0 max-w-full"
           />
         </div>
 
