@@ -5,8 +5,9 @@ import AboutSection from "@/components/AboutSection";
 import Headliners from "@/components/Headliners";
 import EventsSection from "@/components/EventsSection";
 import Footer from "@/components/Footer";
-import Gallery from "@/components/Gallery";
 import Tape from "@/components/Tape";
+import ImageCarousel from "@/components/ImageCarousel";
+import Sponsors from "@/components/Sponsors";
 
 
 
@@ -18,7 +19,7 @@ function RouteComponent() {
   return (
     <>
       <Nav />
-      <div className="snap-y snap-mandatory h-screen overflow-y-scroll">
+      <div className="snap-y snap-mandatory h-screen overflow-y-scroll overflow-x-hidden">
         <HomeSection />
         <AboutSection/>
         <Tape />
@@ -26,7 +27,8 @@ function RouteComponent() {
           <Headliners />
         </div>
         <EventsSection/>
-        <Gallery/>
+        <ImageCarousel />
+        <Sponsors />
         <Footer/>
       </div>
     </>
