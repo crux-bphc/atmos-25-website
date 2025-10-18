@@ -10,13 +10,13 @@ import img6 from "../assets/headliners/Innowave.jpeg";
 const events = [
   { title: "Robowars", subtitle: "Thriveforce", itemNumber: 1, image: img1 },
   {
-    title: "DRL",
+    title: "Velocity Vortex",
     subtitle: "Aeolus",
     itemNumber: 2,
     image: img2,
   },
-  { title: "Hackathon", subtitle: "ACM", itemNumber: 3, image: img3 },
-  { title: "ATV Expo", subtitle: "SAE", itemNumber: 4, image: img4 },
+  { title: "CSA Workshop", subtitle: "CSA", itemNumber: 3, image: img3 },
+  { title: "Crack the Case", subtitle: "BHCG", itemNumber: 4, image: img4 },
   { title: "CanSat", subtitle: "SEDS", itemNumber: 5, image: img5 },
   { title: "Innowave", subtitle: "E-Cell", itemNumber: 6, image: img6 },
 ];
