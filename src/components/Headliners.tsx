@@ -22,20 +22,30 @@ const events = [
 ];
 
 const Headliners = () => {
-  const [isBackground, setIsBackground] = useState<string | null>(null);
+  const [activeImage, setActiveImage] = useState<string | null>(null);
   const handleHover = (image: string) => {
-    setIsBackground(image);
+    setActiveImage(image);
   };
   const handleLeave = () => {
-    setIsBackground(null);
+    setActiveImage(null);
   };
   return (
-    <>
+    <div className="hl-container relative w-full">
+      <div className="hl-backgrounds absolute inset-0 w-full h-full overflow-hidden">
+        {events.map((event) => (
+          <img
+            key={event.itemNumber}
+            src={event.image}
+            alt={`${event.title} background`}
+            className={`
+              absolute w-full h-full object-cover transition-opacity duration-50 ease-in-out
+              ${activeImage === event.image ? "opacity-100" : "opacity-0"}
+            `}
+          />
+        ))}
+      </div>
       <ul
-        className="hl-list bg-cover bg-center flex flex-col bg-none"
-        style={{
-          backgroundImage: isBackground ? `url(${isBackground})` : "none",
-        }}
+        className="hl-list relative z-10 flex flex-col bg-none"
       >
         {events.map((event) => (
           <li
@@ -51,7 +61,7 @@ const Headliners = () => {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };
 
