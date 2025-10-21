@@ -16,8 +16,8 @@ const events = [
     image: img2,
   },
   { title: "CSA Workshop", subtitle: "CSA", itemNumber: 3, image: img3 },
-  { title: "Crack the Case", subtitle: "BHCG", itemNumber: 4, image: img4 },
-  { title: "CanSat", subtitle: "SEDS", itemNumber: 5, image: img5 },
+  { title: "Break the Case", subtitle: "BHCG", itemNumber: 4, image: img4 },
+  { title: "AeroBITS", subtitle: "SEDS", itemNumber: 5, image: img5 },
   { title: "Innowave", subtitle: "E-Cell", itemNumber: 6, image: img6 },
 ];
 
