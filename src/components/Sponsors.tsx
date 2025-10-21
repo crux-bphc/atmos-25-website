@@ -6,7 +6,7 @@ export default function Sponsors() {
   const images = Object.values(imageModules).map((mod: any) => mod.default);
 
   return (
-    <section id="sponsors" className="w-screen py-16 snap-start">
+    <section id="sponsors" className="w-screen py-16 snap-center">
       <h2 className="text-5xl text-center text-white mb-12">
         Our Sponsors
       </h2>

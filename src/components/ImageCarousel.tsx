@@ -5,7 +5,7 @@ export default function ImageCarousel() {
   const images = Object.values(imageModules).map((mod: any) => mod.default);
 
   return (
-    <section id="gallery" className="w-full py-12 snap-start overflow-hidden">
+    <section id="gallery" className="w-full py-12 snap-center overflow-hidden">
         <div className="relative h-screen flex flex-col justify-center gap-8">
           <CarouselRow images={images} direction="right" speed="slow" />
           <CarouselRow images={images} direction="left" speed="medium" />
