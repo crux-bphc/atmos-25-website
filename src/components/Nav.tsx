@@ -31,7 +31,7 @@ export default function Nav() {
 			{createPortal(
 				<div
 					className={
-						`fixed inset-0 transition-all duration-200 ease-in-out flex flex-col justify-center items-center gap-6 font-bold md:text-6xl text-5xl
+						`fixed inset-0 transition-all duration-200 ease-in-out flex flex-col justify-center items-center gap-6 font-bold md:text-6xl text-5xl w-screen h-dvh
 						${isOpen 
 							? "z-[9999] opacity-100 visible pointer-events-auto backdrop-blur-lg bg-black/40" 
 							: "z-40 opacity-0 invisible pointer-events-none backdrop-blur-none"

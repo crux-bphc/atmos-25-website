@@ -19,7 +19,7 @@ function RouteComponent() {
   return (
     <>
       <Nav />
-      <div className="snap-y snap-mandatory h-screen overflow-y-scroll overflow-x-hidden">
+      <div className="snap-y snap-mandatory h-screen overflow-y-scroll overflow-x-hidden max-w-screen">
         <HomeSection />
         <AboutSection/>
         <Tape />
