@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-import img1 from "../assets/headliners/robowars.png";
-import img2 from "../assets/headliners/DRLRace.jpg";
-import img3 from "../assets/headliners/Hackathon.png.webp";
-import img4 from "../assets/headliners/ATVexpo.jpeg";
-import img5 from "../assets/headliners/Cansat.jpg";
-import img6 from "../assets/headliners/Innowave.jpeg";
+import img1 from "../assets/headliners/robowars.webp";
+import img2 from "../assets/headliners/DRLRace.webp";
+import img3 from "../assets/headliners/Hackathon.webp";
+import img4 from "../assets/headliners/CrackTheCase.webp";
+import img5 from "../assets/headliners/Cansat.webp";
+import img6 from "../assets/headliners/Workshop.webp";
 
 const events = [
   { title: "Robowars", subtitle: "Thriveforce", itemNumber: 1, image: img1 },
