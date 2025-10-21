@@ -67,11 +67,11 @@ export default function EventsSection(){
 				
 			</motion.div>
 			<div className="h-[70%] w-full mt-auto md:w-[70%] md:h-full md:ml-auto relative md:pb-24 px-4 md:px-12 md:py-8 md:px-32 flex flex-col justify-center items-center gap-3 md:gap-none">
-				<EventLink href="/" label="Workshops" className="self-start my-1 md:ml-8"/>
-				<EventLink href="/" label="Proshows" className="self-end my-1 md:mt-6 md:mr-12"/>
-				<EventLink href="/" label="Talks" className="self-start my-1 ml-6"/>
-				<EventLink href="/" label="Competition" className="self-end my-1"/>
-				<EventLink href="/" label="Games" className="self-start my-1 md:ml-16 md:mt-2"/>
+				<EventLink href="/coming-soon" label="Workshops" className="self-start my-1 md:ml-8"/>
+				<EventLink href="/coming-soon" label="Proshows" className="self-end my-1 md:mt-6 md:mr-12"/>
+				<EventLink href="/coming-soon" label="Talks" className="self-start my-1 ml-6"/>
+				<EventLink href="/coming-soon" label="Competition" className="self-end my-1"/>
+				<EventLink href="/coming-soon" label="Games" className="self-start my-1 md:ml-16 md:mt-2"/>
 				{
 					Array.from({length: isMobile ? 20 : 30}, () => <Glass className="inset-0 w-24 h-36 left-1/100 top-2/16" style={{left: `${Math.random()*100}%`}} speed={10*Math.random()}/>)
 				}
