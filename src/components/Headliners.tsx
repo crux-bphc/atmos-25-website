@@ -45,9 +45,9 @@ const Headliners = () => {
             className="hl-item h-20 border-y-1 bg-none"
           >
             <div className="flex flex-col">
-              <h2 className="font-[helvetica] md:text-6xl text-5xl">{event.title}</h2>
+              <h2 className="font-[helvetica] md:text-6xl text-4xl">{event.title}</h2>
             </div>
-            <h3 className="hl-number font-[helvetica] font-bold md:text-6xl text-5xl">{event.itemNumber}</h3>
+            <h3 className="hl-number font-[helvetica] font-bold md:text-6xl text-4xl">{event.itemNumber}</h3>
           </li>
         ))}
       </ul>
