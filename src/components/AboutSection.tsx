@@ -1,4 +1,5 @@
 import spanner_bottom from "@/assets/spanner-bottom.png";
+import CountUp from "@/components/CountUp";
 
 export default function AboutSection() {
 	return (
@@ -14,20 +15,47 @@ export default function AboutSection() {
 					className="absolute inset-0 w-full h-full object-top object-cover z-[-1]"
 					alt="background image"
 			/>
-			<div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center font-[rubik] z-2">
-					<div className="space-y-6">
-							<div className="space-y-2">
-									<div className="text-2xl md:text-3xl font-normal text-black">
-											<span className="text-4xl md:text-6xl font-bold">10,000</span> students footfall
+			<div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row gap-12 items-center font-[rubik] z-2">
+					<div className="space-y-4 md:h-svh flex flex-col md:w-1/2">
+							<div className="space-y-2 mt-auto">
+									<div className="text-2xl md:text-4xl font-normal text-black">
+											<span className="text-4xl md:text-5xl font-bold">
+												<CountUp
+													from={0}
+													to={10000}
+													separator=","
+													direction="up"
+													duration={.5}
+													className="count-up-text"
+												/>
+											</span> Students footfall
 									</div> 
 							</div>
+							<div className="w-3/4 h-[4px] bg-black"></div>
 							<div className="space-y-2">
-									<div className="text-2xl md:text-3xl text-black"><span className="font-[600]">Best</span> Proshows</div>
-									<div className="w-20 h-1 bg-black"></div>
+									<div className="text-2xl md:text-4xl font-normal text-black">
+											<span className="text-4xl md:text-5xl font-bold">
+												<CountUp
+													from={0}
+													to={50}
+													separator=","
+													direction="up"
+													duration={.5}
+													className="count-up-text"
+												/>+
+											</span> Events
+									</div> 
 							</div>
-							<div className="text-lg md:text-xl text-black">Top Workshops</div>
+							<div className="w-3/4 h-[4px] bg-black"></div>
+							<div className="space-y-2 pb-24">
+									<div className="text-2xl md:text-4xl font-normal text-black">
+											<span className="text-4xl md:text-5xl font-bold">
+												A - List
+											</span> Proshows
+									</div> 
+							</div>
 					</div>
-					<div className="space-y-4">
+					<div className="space-y-4 pt-64 md:w-1/2">
 							<h1 className="text-4xl md:text-6xl font-[600] text-black leading-tight">
 							Introducing the largest Technical Fest of South India
 							</h1>
