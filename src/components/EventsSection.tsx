@@ -17,7 +17,7 @@ export default function EventsSection(){
 	}	
 
 	return (
-		<section ref={sectionRef} id="events" className="h-svh w-screen relative flex flex-row bg-radial/oklab from-[#FB71BC] to-[#FE45A9] overflow-hidden snap-center">
+		<section ref={sectionRef} id="events" className="h-svh w-screen relative flex flex-row bg-radial/oklab from-[#FB71BC] to-[#FE45A9] overflow-hidden snap-start md:snap-center">
 			<motion.div
 			initial = {{width: "100%"}}
 			whileInView={inViewAnimation}
