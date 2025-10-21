@@ -1,9 +1,9 @@
 export default function Sponsors() {
   // Auto-import all sponsor images from the folder
-  const imageModules = import.meta.glob("@/assets/sponsors/*.{png,jpg,jpeg,webp,svg}", {
-    eager: true,
-  });
-  const images = Object.values(imageModules).map((mod: any) => mod.default);
+  // const imageModules = import.meta.glob("@/assets/sponsors/*.{png,jpg,jpeg,webp,svg}", {
+  //   eager: true,
+  // });
+  // const images = Object.values(imageModules).map((mod: any) => mod.default);
 
   return (
     <section id="sponsors" className="w-screen py-16 snap-center">
