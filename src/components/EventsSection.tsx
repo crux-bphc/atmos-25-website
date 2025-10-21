@@ -17,7 +17,7 @@ export default function EventsSection(){
 	}	
 
 	return (
-		<section ref={sectionRef} className="h-svh w-screen relative flex flex-row bg-radial/oklab from-[#FB71BC] to-[#FE45A9] overflow-hidden snap-start">
+		<section ref={sectionRef} id="events" className="h-svh w-screen relative flex flex-row bg-radial/oklab from-[#FB71BC] to-[#FE45A9] overflow-hidden snap-center">
 			<motion.div
 			initial = {{width: "100%"}}
 			whileInView={inViewAnimation}
@@ -66,7 +66,7 @@ export default function EventsSection(){
 				</svg>
 				
 			</motion.div>
-			<div id="events" className="h-[70%] w-full mt-auto md:w-[70%] md:h-full md:ml-auto relative md:pb-24 px-4 md:px-12 md:py-8 md:px-32 flex flex-col justify-center items-center gap-3 md:gap-none">
+			<div className="h-[70%] w-full mt-auto md:w-[70%] md:h-full md:ml-auto relative md:pb-24 px-4 md:px-12 md:py-8 md:px-32 flex flex-col justify-center items-center gap-3 md:gap-none">
 				<EventLink href="/" label="Workshops" className="self-start my-1 md:ml-8"/>
 				<EventLink href="/" label="Proshows" className="self-end my-1 md:mt-6 md:mr-12"/>
 				<EventLink href="/" label="Talks" className="self-start my-1 ml-6"/>
