@@ -1,4 +1,4 @@
-import spanner_top from "@/assets/spanner-top.png";
+import spanner_top from "@/assets/spanner-top.webp";
 
 export default function ComingSoon() {
     return (
