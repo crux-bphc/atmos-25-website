@@ -1,4 +1,4 @@
-import spanner_top from "@/assets/spanner-top.png";
+import spanner_top from "@/assets/spanner-top.webp";
 import Tape from "@/components/Tape";
 
 export default function HomeSection() {
