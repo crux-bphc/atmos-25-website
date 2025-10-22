@@ -37,6 +37,7 @@ const Headliners = () => {
             key={event.itemNumber}
             src={event.image}
             alt={`${event.title} background`}
+            loading="lazy"
             className={`
               absolute w-full h-full object-cover transition-opacity duration-50 ease-in-out
               ${activeImage === event.image ? "opacity-100" : "opacity-0"}
