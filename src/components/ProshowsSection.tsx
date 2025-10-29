@@ -286,7 +286,7 @@ export default function ProshowsSection() {
                 <img
                   src={artist.image}
                   alt={artist.name}
-                  className="col-start-1 row-start-1 h-2/3 w-auto md:w-2/3 md:h-auto object-contain self-center md:self-end justify-self-center md:justify-self-start z-20"
+                  className="col-start-1 row-start-1 h-2/3 w-auto md:w-2/3 md:h-auto object-contain self-center md:self-end justify-self-center md:justify-self-start z-20 pl-4 pb-3"
                 />
                 <div className="col-start-1 row-start-1 w-full h-full relative p-4 md:p-8 z-30">
                   <div className="hidden md:block w-full h-full">
