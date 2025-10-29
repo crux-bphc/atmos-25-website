@@ -322,41 +322,43 @@ export default function ProshowsSection() {
               </div>
 
               <div className="md:hidden w-full h-full p-4 flex flex-col gap-4 overflow-y-auto bg-orange-600">
-                <h2 className="text-black font-bold text-2xl text-center">
+                <h2 className="pt-5 text-black font-bold text-4xl text-center">
                   {artist.title}
                 </h2>
                 <div className="relative grid justify-items-center">
                   <img
                     src={artist.flameA}
                     alt=""
-                    className="col-start-1 row-start-1 w-2/3 h-auto object-contain animate-frame-swap-A"
+                    className="col-start-1 row-start-1 w-[70%] h-auto object-contain animate-frame-swap-A"
                   />
                   <img
                     src={artist.flameB}
                     alt=""
-                    className="col-start-1 row-start-1 w-2/3 h-auto object-contain animate-frame-swap-B"
+                    className="col-start-1 row-start-1 w-[70%] h-auto object-contain animate-frame-swap-B"
                   />
                   <img
                     src={artist.image}
                     alt={artist.name}
-                    className="col-start-1 row-start-1 w-2/3 h-auto object-contain z-10"
+                    className="col-start-1 row-start-1 w-[70%] h-auto object-contain z-10"
                   />
                 </div>
                 <div className="flex justify-between items-baseline text-black">
-                  <h3 className="font-bold text-2xl">
+                  <h3 className="font-bold text-3xl">
                     {artist.name.toUpperCase()}
                   </h3>
-                  <p className="font-bold text-base">{artist.date}</p>
+                  <p className="font-bold text-3xl">{artist.date}</p>
                 </div>
-                <div className="flex flex-col text-black text-base">
-                  <p>{artist.time}</p>
-                  <p>{artist.location}</p>
-                  <p>{artist.venue}</p>
-                </div>
-                <div>
-                  <button className="bg-white text-black font-bold py-1.5 px-3 rounded-lg text-sm">
-                    Book Tickets
-                  </button>
+                <div className="flex justify-between items-center">
+                  <div className="flex flex-col text-black text-xl">
+                    <p>{artist.time}</p>
+                    <p>{artist.location}</p>
+                    <p>{artist.venue}</p>
+                  </div>
+                  <div>
+                    <button className="bg-white text-black font-bold py-1.5 px-3 rounded-lg text-sm">
+                      Book Tickets
+                    </button>
+                  </div>
                 </div>
                 <div className="h-16"></div>
               </div>

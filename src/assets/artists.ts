@@ -1,8 +1,8 @@
 // src/artists.ts
 import Flame1 from "../assets/proshows/Proshows_01_export.png";
 import Flame2 from "../assets/proshows/Proshows_02_export.png";
-import Mithoon from "../assets/proshows/mithoon.png";
-import Carnivore from "../assets/proshows/Carnivore.png"; 
+import Mithoon from "../assets/proshows/mithoon_export.png";
+import Carnivore from "../assets/proshows/Carnivore_export.png"; 
 
 
 export const artists = [
