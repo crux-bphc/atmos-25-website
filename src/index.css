@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import "tailwindcss";
-
+@import "swiper/css";
 
 @font-face {
   font-family: "Helvetica";
@@ -88,19 +88,48 @@ button:focus-visible {
   }
 }
 
+@keyframes frame-swap-A {
+  0%,
+  49.9% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes frame-swap-B {
+  0%,
+  49.9% {
+    opacity: 0;
+  }
+  50%,
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-frame-swap-A {
+  animation: frame-swap-A 0.4s linear infinite;
+}
+.animate-frame-swap-B {
+  animation: frame-swap-B 0.4s linear infinite;
+}
+
 .animate-move-left {
   animation: move-left 30s linear infinite;
 }
 
 @keyframes expand {
   0% {
-    flex-grow: 1
+    flex-grow: 1;
   }
   50% {
-    flex-grow: 3 
+    flex-grow: 3;
   }
   100% {
-    flex-grow: 1
+    flex-grow: 1;
   }
 }
 
@@ -134,13 +163,21 @@ button:focus-visible {
 }
 
 @keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes scrollReverse {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .animate-scroll-slow {
