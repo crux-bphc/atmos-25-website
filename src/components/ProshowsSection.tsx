@@ -339,7 +339,7 @@ export default function ProshowsSection() {
                   <img
                     src={artist.image}
                     alt={artist.name}
-                    className="col-start-1 row-start-1 w-[70%] h-auto object-contain z-10"
+                    className="col-start-1 row-start-1 w-[70%] h-auto object-contain z-10 pl-2.5 pb-2"
                   />
                 </div>
                 <div className="flex justify-between items-baseline text-black">
@@ -355,7 +355,7 @@ export default function ProshowsSection() {
                     <p>{artist.venue}</p>
                   </div>
                   <div>
-                    <button className="bg-white text-black font-bold py-1.5 px-3 rounded-lg text-sm">
+                    <button className="bg-white text-black dark:bg-white dark:text-black font-bold py-1.5 px-3 rounded-lg text-sm">
                       Book Tickets
                     </button>
                   </div>
