@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 
 import { artists } from "../assets/artists";
 import useMediaQuery from "@/hooks/useMediaQuery";
@@ -25,7 +25,7 @@ export default function ProshowsSection() {
     <section
       ref={sectionRef}
       id="proshows"
-      className="h-svh w-screen relative flex flex-row bg-radial/oklab bg-orange-600 overflow-hidden snap-start md:snap-center"
+      className="h-svh w-screen relative flex flex-row bg-radial/oklab bg-orange-500 overflow-hidden snap-start md:snap-center"
     >
       <motion.div
         initial={{ width: "100%" }}
@@ -259,7 +259,8 @@ export default function ProshowsSection() {
         </div>
 
         <Swiper
-          modules={[Autoplay]}
+          modules={[Navigation, Autoplay]}
+          navigation
           spaceBetween={0}
           slidesPerView={1}
           loop={true}
@@ -272,7 +273,7 @@ export default function ProshowsSection() {
           {artists.map((artist) => (
             <SwiperSlide key={artist.id}>
               <div className="hidden md:grid w-full h-full relative md:pl-4 md:pb-4">
-                <div className="col-start-1 row-start-1 w-full h-full bg-orange-600 z-0"></div>
+                <div className="col-start-1 row-start-1 w-full h-full bg-orange-500 z-0"></div>
                 <img
                   src={artist.flameA}
                   alt=""
@@ -286,11 +287,11 @@ export default function ProshowsSection() {
                 <img
                   src={artist.image}
                   alt={artist.name}
-                  className="col-start-1 row-start-1 h-2/3 w-auto md:w-2/3 md:h-auto object-contain self-center md:self-end justify-self-center md:justify-self-start z-20 pl-4 pb-3"
+                  className="col-start-1 row-start-1 h-2/3 w-auto md:w-2/3 md:h-auto object-contain self-center md:self-end justify-self-center md:justify-self-start z-20"
                 />
                 <div className="col-start-1 row-start-1 w-full h-full relative p-4 md:p-8 z-30">
                   <div className="hidden md:block w-full h-full">
-                    <h2 className="absolute top-8 left-8 text-white font-bold sm:text-5xl lg:text-7xl">
+                    <h2 className="absolute top-8 left-8 text-black font-bold sm:text-5xl lg:text-7xl">
                       {artist.title}
                     </h2>
                     <div className="absolute top-1/2 right-8 -translate-y-1/2 flex flex-col items-end gap-2">
@@ -321,7 +322,7 @@ export default function ProshowsSection() {
                 </div>
               </div>
 
-              <div className="md:hidden w-full h-full p-4 flex flex-col gap-4 overflow-y-auto bg-orange-600">
+              <div className="md:hidden w-full h-full p-4 flex flex-col gap-4 overflow-y-auto bg-orange-500">
                 <h2 className="pt-5 text-black font-bold text-4xl text-center">
                   {artist.title}
                 </h2>
@@ -339,7 +340,7 @@ export default function ProshowsSection() {
                   <img
                     src={artist.image}
                     alt={artist.name}
-                    className="col-start-1 row-start-1 w-[70%] h-auto object-contain z-10 pl-2.5 pb-2"
+                    className="col-start-1 row-start-1 w-[70%] h-auto object-contain z-10"
                   />
                 </div>
                 <div className="flex justify-between items-baseline text-black">

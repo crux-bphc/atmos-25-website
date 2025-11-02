@@ -1,9 +1,9 @@
 // src/artists.ts
-import Flame1 from "../assets/proshows/Proshows_01_export.png";
-import Flame2 from "../assets/proshows/Proshows_02_export.png";
-import Mithoon from "../assets/proshows/mithoon_export.png";
-import Carnivore from "../assets/proshows/Carnivore_export.png"; 
-
+import Flame1 from "../assets/proshows/Proshows_0004_Proshows_01_export.webp";
+import Flame2 from "../assets/proshows/Proshows_0003_Proshows_02_export.webp";
+import Mithoon from "../assets/proshows/Proshows_0000_mithoon.webp";
+import Carnivore from "../assets/proshows/Proshows_0002_Carnivore.webp"; 
+import Kaustubh from "../assets/proshows/Proshows_0001_kaustubh.webp"; 
 
 export const artists = [
   {
@@ -30,5 +30,18 @@ export const artists = [
     flameA: Flame1,
     flameB: Flame2,
   },
+
+  {
+    id: 3,
+    name: "Kaustubh",
+    title: "Comedy Night",
+    date: "7.11.Sat",
+    time: "7:00pm",
+    location: "BITS Hyd",
+    venue: "Auditorium",
+    image: Kaustubh,
+    flameA: Flame1,
+    flameB: Flame2,
+  }
   
 ];

@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import "tailwindcss";
 @import "swiper/css";
+@import "swiper/css/navigation";
 
 @font-face {
   font-family: "Helvetica";
@@ -197,4 +198,21 @@ button:focus-visible {
 }
 .animate-scroll-reverse-fast {
   animation: scrollReverse var(--duration) linear infinite;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000 !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px !important;
+  font-weight: 800 !important;
 }
