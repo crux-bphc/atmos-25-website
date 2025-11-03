@@ -8,8 +8,7 @@ import Footer from "@/components/Footer";
 import Tape from "@/components/Tape";
 import ImageCarousel from "@/components/ImageCarousel";
 import Sponsors from "@/components/Sponsors";
-
-
+import ProshowsSection from "@/components/ProshowsSection";
 
 export const Route = createFileRoute("/")({
   component: RouteComponent,
@@ -21,15 +20,19 @@ function RouteComponent() {
       <Nav />
       <div className="snap-y snap-mandatory h-screen overflow-y-scroll overflow-x-hidden max-w-screen">
         <HomeSection />
-        <AboutSection/>
+        <AboutSection />
         <Tape />
-        <div id="headliners" className="snap-center flex flex-col w-screen justify-start items-center overflow-x-hidden bg-[#66f2ff]">
+        <div
+          id="headliners"
+          className="snap-center flex flex-col w-screen justify-start items-center overflow-x-hidden bg-[#66f2ff]"
+        >
           <Headliners />
         </div>
-        <EventsSection/>
+        <EventsSection />
+        <ProshowsSection />
         <ImageCarousel />
         <Sponsors />
-        <Footer/>
+        <Footer />
       </div>
     </>
   );
