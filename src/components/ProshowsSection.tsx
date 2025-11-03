@@ -291,7 +291,7 @@ export default function ProshowsSection() {
                 />
                 <div className="col-start-1 row-start-1 w-full h-full relative p-4 md:p-8 z-30">
                   <div className="hidden md:block w-full h-full">
-                    <h2 className="absolute top-8 left-8 text-black font-bold sm:text-5xl lg:text-7xl">
+                    <h2 className="absolute top-8 left-8 text-white font-bold sm:text-5xl lg:text-7xl">
                       {artist.title}
                     </h2>
                     <div className="absolute top-1/2 right-8 -translate-y-1/2 flex flex-col items-end gap-2">
