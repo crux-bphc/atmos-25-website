@@ -314,9 +314,15 @@ export default function ProshowsSection() {
                         <p>{artist.location}</p>
                         <p>{artist.venue}</p>
                       </div>
-                      <button className="bg-white text-black font-bold py-3 px-6 rounded-lg text-xl sm:text-2xl lg:text-3xl">
-                        Book Tickets
-                      </button>
+                      <a
+                        href="https://unifest.in/fests/56?tab=passes"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <button className="bg-white text-black font-bold py-3 px-6 rounded-lg text-xl sm:text-2xl lg:text-3xl">
+                          Buy Passes
+                        </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -356,9 +362,15 @@ export default function ProshowsSection() {
                     <p>{artist.venue}</p>
                   </div>
                   <div>
-                    <button className="bg-white text-black dark:bg-white dark:text-black font-bold py-1.5 px-3 rounded-lg text-sm">
-                      Book Tickets
-                    </button>
+                    <a
+                      href="https://unifest.in/fests/56?tab=passes"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="bg-white text-black dark:bg-white dark:text-black font-bold py-1.5 px-3 rounded-lg text-sm">
+                        Buy Passes
+                      </button>
+                    </a>
                   </div>
                 </div>
                 <div className="h-16"></div>
