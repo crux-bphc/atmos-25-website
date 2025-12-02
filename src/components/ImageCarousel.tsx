@@ -1,16 +1,22 @@
 export default function ImageCarousel() {
-  const imageModules = import.meta.glob("@/assets/gallery/*.{png,jpg,jpeg,webp}", {
-    eager: true,
-  });
+  const imageModules = import.meta.glob(
+    "@/assets/gallery/*.{png,jpg,jpeg,webp}",
+    {
+      eager: true,
+    }
+  );
   const images = Object.values(imageModules).map((mod: any) => mod.default);
 
   return (
-    <section id="gallery" className="w-full py-12 snap-center overflow-hidden">
-        <div className="relative h-screen flex flex-col justify-center gap-8">
-          <CarouselRow images={images} direction="right" speed="slow" />
-          <CarouselRow images={images} direction="left" speed="medium" />
-          <CarouselRow images={images} direction="right" speed="slow-medium" />
-        </div>
+    <section
+      id="gallery"
+      className="w-full py-12 snap-center overflow-hidden bg-black"
+    >
+      <div className="relative h-screen flex flex-col justify-center gap-8">
+        <CarouselRow images={images} direction="right" speed="slow" />
+        <CarouselRow images={images} direction="left" speed="medium" />
+        <CarouselRow images={images} direction="right" speed="slow-medium" />
+      </div>
     </section>
   );
 }
@@ -28,12 +34,12 @@ function CarouselRow({ images, direction, speed }: RowProps) {
         ? "animate-scroll-slow"
         : "animate-scroll-reverse-slow"
       : speed === "medium"
-      ? direction === "left"
-        ? "animate-scroll-medium"
-        : "animate-scroll-reverse-medium"
-      : direction === "left"
-      ? "animate-scroll-fast"
-      : "animate-scroll-reverse-fast";
+        ? direction === "left"
+          ? "animate-scroll-medium"
+          : "animate-scroll-reverse-medium"
+        : direction === "left"
+          ? "animate-scroll-fast"
+          : "animate-scroll-reverse-fast";
 
   return (
     <div
@@ -56,7 +62,6 @@ function CarouselRow({ images, direction, speed }: RowProps) {
     </div>
   );
 }
-
 
 function speedDuration(speed: RowProps["speed"]) {
   switch (speed) {

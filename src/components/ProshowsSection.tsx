@@ -291,7 +291,7 @@ export default function ProshowsSection() {
                 />
                 <div className="col-start-1 row-start-1 w-full h-full relative p-4 md:p-8 z-30">
                   <div className="hidden md:block w-full h-full">
-                    <h2 className="absolute top-8 left-8 text-black font-bold sm:text-5xl lg:text-7xl">
+                    <h2 className="absolute top-8 left-8 text-white font-bold sm:text-5xl lg:text-7xl">
                       {artist.title}
                     </h2>
                     <div className="absolute top-1/2 right-8 -translate-y-1/2 flex flex-col items-end gap-2">
@@ -314,9 +314,15 @@ export default function ProshowsSection() {
                         <p>{artist.location}</p>
                         <p>{artist.venue}</p>
                       </div>
-                      <button className="bg-white text-black font-bold py-3 px-6 rounded-lg text-xl sm:text-2xl lg:text-3xl">
-                        Book Tickets
-                      </button>
+                      <a
+                        href="https://unifest.in/fests/56?tab=passes"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <button className="bg-white text-black font-bold py-3 px-6 rounded-lg text-xl sm:text-2xl lg:text-3xl">
+                          Buy Passes
+                        </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -356,9 +362,15 @@ export default function ProshowsSection() {
                     <p>{artist.venue}</p>
                   </div>
                   <div>
-                    <button className="bg-white text-black dark:bg-white dark:text-black font-bold py-1.5 px-3 rounded-lg text-sm">
-                      Book Tickets
-                    </button>
+                    <a
+                      href="https://unifest.in/fests/56?tab=passes"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="bg-white text-black dark:bg-white dark:text-black font-bold py-1.5 px-3 rounded-lg text-sm">
+                        Buy Passes
+                      </button>
+                    </a>
                   </div>
                 </div>
                 <div className="h-16"></div>
