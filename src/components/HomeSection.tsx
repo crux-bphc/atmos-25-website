@@ -1,6 +1,8 @@
 import spanner_top from "@/assets/spanner-top.webp";
 import Tape from "@/components/Tape";
 
+import lily from "@/assets/sponsors/LillyLogo_White.png";
+
 export default function HomeSection() {
     return (
         <section id="top" className="snap-start flex flex-col w-screen justify-center items-center overflow-hidden relative h-svh">
@@ -39,8 +41,14 @@ export default function HomeSection() {
                     </clipPath>
                 </defs>
             </svg>
-            
-            <div className="grid grid-rows-[50fr_auto_4rem_auto_1fr] h-screen relative z-20 place-items-center">
+            <div className="grid grid-rows-[50fr_10fr_auto_4rem_auto_2fr] h-screen relative z-20 place-items-center">
+                <div></div>
+                <div className="flex flex-col items-center justify-center mb-6">
+                    <p className="text-2xl md:text-4xl font-semibold text-black mb-2">Sponsored By</p>
+                    <div className="w-full max-w-72 flex items-center justify-center">
+                        <img src={lily} alt="Lilly Logo" className="object-cover object-center w-full max-w-64 aspect-[2/.75]"/>
+                    </div>
+                </div>
                 <div></div>
                 <Tape />
                 <div></div>
